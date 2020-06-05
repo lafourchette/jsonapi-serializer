@@ -3,18 +3,27 @@
   "version": "3.5.5",
   "description": "A Node.js framework agnostic library for serializing your data to JSON API",
   "main": "index.js",
+  "publishConfig": {
+    "registry": "https://npmregistry.lafourchette.io",
+    "access": "restricted"
+  },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha",
+    "release-dev": "thefork-npm-publish --no-commit dev",
+    "release": "thefork-npm-publish --check-branch master --custom-step custom-publish"
   },
   "author": "Sandro Munda <sandro@munda.me>",
   "license": "MIT",
   "repository": "SeyZ/jsonapi-serializer",
-  "engines" : { "node" : ">=0.12" },
+  "engines": {
+    "node": ">=0.12"
+  },
   "dependencies": {
     "inflected": "^1.1.6",
     "lodash": "^4.16.3"
   },
   "devDependencies": {
+    "@lafourchette/npm-publish": "^1.1.2",
     "chai": "^2.3.0",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.0",
