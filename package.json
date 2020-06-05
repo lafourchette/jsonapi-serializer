@@ -7,6 +7,10 @@
     "registry": "https://npmregistry.lafourchette.io",
     "access": "restricted"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lafourchette/jsonapi-serializer.git"
+  },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
     "release-dev": "thefork-npm-publish --no-commit dev",
@@ -14,10 +18,13 @@
   },
   "author": "Sandro Munda <sandro@munda.me>",
   "license": "MIT",
-  "repository": "lafourchette/jsonapi-serializer",
   "engines": {
     "node": ">=0.12"
   },
+  "files": [
+    "lib/**",
+    "index.js"
+  ],
   "dependencies": {
     "inflected": "^1.1.6",
     "lodash": "^4.16.3"
